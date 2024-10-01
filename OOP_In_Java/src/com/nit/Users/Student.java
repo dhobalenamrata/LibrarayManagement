@@ -50,7 +50,7 @@ public class Student extends Person {
 		int temp=0;
 		do {
 			if(Library.books[i]==book) {
-				System.out.println(book+" book Found by student.");
+				System.out.println(book+" book Found by "+name);
 				temp++;
 			}
 			i++;
