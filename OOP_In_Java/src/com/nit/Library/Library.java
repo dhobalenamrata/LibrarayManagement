@@ -8,8 +8,14 @@ public  class Library{
 	private Book book;	
 	
 	public void addBook(Book book) {
-		books[booksCount] = book;
-		booksCount++;
+		if(book instanceof Book) {
+			books[booksCount] = book;
+			booksCount++;
+		}
+		else {
+			System.err.println(book+"is not an element of Book");
+			System.err.println("Please provide a valid element.");
+		}
 	}
 	public void removeBook(Book book) {
 		for(int i=0; i<booksCount;i++) {
