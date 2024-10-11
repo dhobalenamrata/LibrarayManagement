@@ -7,13 +7,13 @@ public  class Library{
 	public static Book [] books = new Book[50];
 	private Book book;	
 	
-	public void addBook(Book book) {
-		if(book instanceof Book) {
-			books[booksCount] = book;
+	public void addBook(Object obj) {
+		if(obj instanceof Book) {
+			books[booksCount] = obj;
 			booksCount++;
 		}
 		else {
-			System.err.println(book+"is not an element of Book");
+			System.err.println(obj+"is not an element of Book");
 			System.err.println("Please provide a valid element.");
 		}
 	}
